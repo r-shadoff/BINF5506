@@ -14,3 +14,12 @@ rule all:
     input: 
         f"{RAW_DIR}/reference.fasta"
 
+rule create_dirs:
+    output:
+        marker = "results/.dirs_created"
+    shell:
+        """
+        mkdir -p $RAW_DIR $ALIGNED_DIR $VARIANT_DIR $ANNOTATED_DIR $QC_DIR $SNPEFF_DATA_DIR
+        touch {output.marker}
+        """
+
