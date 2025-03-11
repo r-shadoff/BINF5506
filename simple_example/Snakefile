@@ -2,7 +2,7 @@ rule all:
     input:
         "hello.txt",
         "goodbye.txt"
-
+        
 rule hello:
     output: 
         "hello.txt"
@@ -14,3 +14,7 @@ rule goodbye:
         "goodbye.txt"
     shell:
         "echo 'Goodbye World' > goodbye.txt"
+
+
+
+
